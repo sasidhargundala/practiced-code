@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Drop down-menu</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body{
+                background: gray;
+            }
+            .dropdownmenu ul, .dropdownmenu li{
+                margin: 0;
+                padding: 0;
+            }
+            .dropdownmenu ul{
+                    background: gray;
+                    list-style: none;
+                    width: 100%;
+                }
+                .dropdownmenu li{
+                    float: left;
+                    position: relative;
+                    width: auto;
+                }
+                .dropdownmenu a{
+                    background: blue;
+                    color: white;
+                    display: block;
+                    font-weight: 400;
+                    font-size: 13px;
+                    font-family: 'poppins' ,sans-serif;
+                    padding: 15px 55px;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: all 0 25s ease;
+                }
+                .dropdownmenu li:hover a{
+                    background: gray;
+                }
+                #submenu{
+                    left: 0;
+                    opacity: 0;
+                    position: absolute;
+                    top: 35px;
+                    visibility: hidden;
+                    z-index: 1;
+                }
+                li:hover ul#submenu{
+                    opacity: 1;
+                    top: 80px;
+                    visibility: visible;
+                }
+                #submenu li{
+                    float: none;
+                    width: 100%;
+                }
+                #submenu a:hover{
+                    background: orange;
+                }
+                #submenu a{
+                    background-color: grey;
+                }
+                
+        </style>
+        
+    </head>
+
+    <body>
+        <nav class="dropdownmenu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Products</a></li>
+                <ul id="submenu">
+                    <li><a href="">Router</a></li>
+                    <li><a href="">Keyboard</a></li>
+                    <li><a href="">Laptop Bag</a></li>
+                    <li><a href="">Mouse</a></li>
+
+                </ul>
+                <li><a href="">Registration</a></li>
+                <li><a href="">Login</a></li>
+                
+            </ul>
+        </nav>
+    </body>
+</html>
